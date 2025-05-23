@@ -29,13 +29,16 @@ public class Client {
                 if (message.equalsIgnoreCase("TIME")) {
                     LocalDateTime now = LocalDateTime.now();
                     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
-                    break;
+                    System.out.println(now.format(formatter));
                 }
 
                 if (message.equalsIgnoreCase("DATE")) {
-                    System.out.println();
+                    LocalDateTime now = LocalDateTime.now();
+                    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+                    System.out.println(now.format(formatter));
                     break;
                 }
+
 
                 if (message.equalsIgnoreCase("UPTIME")) {
                     System.out.println("Disconnected from server.");
