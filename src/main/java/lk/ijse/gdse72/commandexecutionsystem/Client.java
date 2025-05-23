@@ -30,6 +30,7 @@ public class Client {
                     LocalDateTime now = LocalDateTime.now();
                     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
                     System.out.println(now.format(formatter));
+                    continue; // skip reading from server
                 }
 
                 if (message.equalsIgnoreCase("DATE")) {
